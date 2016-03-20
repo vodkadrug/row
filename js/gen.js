@@ -1,29 +1,32 @@
-var F = $('.field'),
-	colors = [ '#cccccc',
-			'#ffff00',
-			'#ffffff',
-			'#ffab40',
-			'#e51c23',
-			'#ff5177',
-			'#b2ff59',
-			'#3f51b5',
-			'#e040fb',
-			'#000000'
-		]
-function randomize () {
-	return Math.floor(Math.random()*(10))
+var cs = [
+    '#000',
+    '#87cefa',
+    '#ccc',
+    '#face45'
+]
+
+function randomize() {
+    return Math.floor(Math.random() * (4))
 }
-function generator () {
-	// document.write('<div class="gameover">Wasted</div>');
-	for (i=0; i<245; i++) {
-			document.write('<div class="field"></div>');
-		};
-	};
+
+function del() {
+    $('.box div').click(function() {
+        $(this).remove();
+    });
+}
 
 var field = {
-	color: function () {
-		this.style.backgrounColor(colors(randomize()))
-	}
+    appear: function() {
+        document.querySelectorAll('.box')[0].appendChild(document.createElement('div'));
+        console.log(document.querySelectorAll('.box div'))
+    }
+}
+function run() {
+    generator();
 }
 
-F.each().color;
+function generator() {
+    for (var i = 0; i < 64; i++) {
+        field.appear();
+    }
+}

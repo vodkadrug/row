@@ -2,27 +2,22 @@
     box-sizing: border-box;
 }
 body {
-	-webkit-user-select: none;
+	/*-webkit-user-select: none;*/
 	overflow: hidden;
+	background-color: #ccc;
 }
 .wrap {
-	width: 40%;
-    padding-bottom: 40%;
+	width: 600px;
+    padding-bottom: 600px;
     height: 0;
 	overflow: hidden;
     position: relative;
     margin: 0 auto;
-    font-size: 0;
+    box-sizing: border-box;
+    background-color: #fff;
 }
 .box {
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
-    text-align: center;
-    border: solid 1px;
+
 }
 .score {
 	text-align: center;
@@ -32,42 +27,82 @@ body {
 	width: 30%;
 	margin: 0 auto;
 }
-.gameover {
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0,0,0,0.8);
-	color: #FFF;
-	overflow: hidden;
-	font-size: 30px;
-	text-align: center;
-	display: none;
-}
-.field {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    margin: 0.625%;
-    width: 11%;
-    padding-bottom: 11%;
-    height: 0;
-	border-radius: 50%;
-	text-align: center;
-	background-color: #eaeaea
-}
-.field:before {
-    content: '';
+
+.box div {
+    display: block;
     position: absolute;
-    top: -2px;
-    left: -2px;
-    border: 2px solid #333;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
+    width: 65px;
+    height: 65px;
+	text-align: center;
+	transition: all ease-out .7s;
+    box-sizing: border-box;
+    color: red;
+    cursor: pointer;
+    
 }
-/*.marked {
-	border: solid;
-	border-width: 2px;
-}*/
+
+.box div:nth-child( n+66 ) {display: none;}
+.box div:nth-child( 2 ) {transform: matrix(1, 0, 0, 1, 530 ,530 );}
+.box div:nth-child( 3 ) {transform: matrix(1, 0, 0, 1, 530 ,455 );}
+.box div:nth-child( 4 ) {transform: matrix(1, 0, 0, 1, 530 ,380 );}
+.box div:nth-child( 5 ) {transform: matrix(1, 0, 0, 1, 530 ,305 );}
+.box div:nth-child( 6 ) {transform: matrix(1, 0, 0, 1, 530 ,230 );}
+.box div:nth-child( 7 ) {transform: matrix(1, 0, 0, 1, 530 ,155 );}
+.box div:nth-child( 8 ) {transform: matrix(1, 0, 0, 1, 530 ,80 );}
+.box div:nth-child( 9 ) {transform: matrix(1, 0, 0, 1, 530 ,5 );}
+.box div:nth-child( 10 ) {transform: matrix(1, 0, 0, 1, 455 ,530 );}
+.box div:nth-child( 11 ) {transform: matrix(1, 0, 0, 1, 455 ,455 );}
+.box div:nth-child( 12 ) {transform: matrix(1, 0, 0, 1, 455 ,380 );}
+.box div:nth-child( 13 ) {transform: matrix(1, 0, 0, 1, 455 ,305 );}
+.box div:nth-child( 14 ) {transform: matrix(1, 0, 0, 1, 455 ,230 );}
+.box div:nth-child( 15 ) {transform: matrix(1, 0, 0, 1, 455 ,155 );}
+.box div:nth-child( 16 ) {transform: matrix(1, 0, 0, 1, 455 ,80 );}
+.box div:nth-child( 17 ) {transform: matrix(1, 0, 0, 1, 455 ,5 );}
+.box div:nth-child( 18 ) {transform: matrix(1, 0, 0, 1, 380 ,530 );}
+.box div:nth-child( 19 ) {transform: matrix(1, 0, 0, 1, 380 ,455 );}
+.box div:nth-child( 20 ) {transform: matrix(1, 0, 0, 1, 380 ,380 );}
+.box div:nth-child( 21 ) {transform: matrix(1, 0, 0, 1, 380 ,305 );}
+.box div:nth-child( 22 ) {transform: matrix(1, 0, 0, 1, 380 ,230 );}
+.box div:nth-child( 23 ) {transform: matrix(1, 0, 0, 1, 380 ,155 );}
+.box div:nth-child( 24 ) {transform: matrix(1, 0, 0, 1, 380 ,80 );}
+.box div:nth-child( 25 ) {transform: matrix(1, 0, 0, 1, 380 ,5 );}
+.box div:nth-child( 26 ) {transform: matrix(1, 0, 0, 1, 305 ,530 );}
+.box div:nth-child( 27 ) {transform: matrix(1, 0, 0, 1, 305 ,455 );}
+.box div:nth-child( 28 ) {transform: matrix(1, 0, 0, 1, 305 ,380 );}
+.box div:nth-child( 29 ) {transform: matrix(1, 0, 0, 1, 305 ,305 );}
+.box div:nth-child( 30 ) {transform: matrix(1, 0, 0, 1, 305 ,230 );}
+.box div:nth-child( 31 ) {transform: matrix(1, 0, 0, 1, 305 ,155 );}
+.box div:nth-child( 32 ) {transform: matrix(1, 0, 0, 1, 305 ,80 );}
+.box div:nth-child( 33 ) {transform: matrix(1, 0, 0, 1, 305 ,5 );}
+.box div:nth-child( 34 ) {transform: matrix(1, 0, 0, 1, 230 ,530 );}
+.box div:nth-child( 35 ) {transform: matrix(1, 0, 0, 1, 230 ,455 );}
+.box div:nth-child( 36 ) {transform: matrix(1, 0, 0, 1, 230 ,380 );}
+.box div:nth-child( 37 ) {transform: matrix(1, 0, 0, 1, 230 ,305 );}
+.box div:nth-child( 38 ) {transform: matrix(1, 0, 0, 1, 230 ,230 );}
+.box div:nth-child( 39 ) {transform: matrix(1, 0, 0, 1, 230 ,155 );}
+.box div:nth-child( 40 ) {transform: matrix(1, 0, 0, 1, 230 ,80 );}
+.box div:nth-child( 41 ) {transform: matrix(1, 0, 0, 1, 230 ,5 );}
+.box div:nth-child( 42 ) {transform: matrix(1, 0, 0, 1, 155 ,530 );}
+.box div:nth-child( 43 ) {transform: matrix(1, 0, 0, 1, 155 ,455 );}
+.box div:nth-child( 44 ) {transform: matrix(1, 0, 0, 1, 155 ,380 );}
+.box div:nth-child( 45 ) {transform: matrix(1, 0, 0, 1, 155 ,305 );}
+.box div:nth-child( 46 ) {transform: matrix(1, 0, 0, 1, 155 ,230 );}
+.box div:nth-child( 47 ) {transform: matrix(1, 0, 0, 1, 155 ,155 );}
+.box div:nth-child( 48 ) {transform: matrix(1, 0, 0, 1, 155 ,80 );}
+.box div:nth-child( 49 ) {transform: matrix(1, 0, 0, 1, 155 ,5 );}
+.box div:nth-child( 50 ) {transform: matrix(1, 0, 0, 1, 80 ,530 );}
+.box div:nth-child( 51 ) {transform: matrix(1, 0, 0, 1, 80 ,455 );}
+.box div:nth-child( 52 ) {transform: matrix(1, 0, 0, 1, 80 ,380 );}
+.box div:nth-child( 53 ) {transform: matrix(1, 0, 0, 1, 80 ,305 );}
+.box div:nth-child( 54 ) {transform: matrix(1, 0, 0, 1, 80 ,230 );}
+.box div:nth-child( 55 ) {transform: matrix(1, 0, 0, 1, 80 ,155 );}
+.box div:nth-child( 56 ) {transform: matrix(1, 0, 0, 1, 80 ,80 );}
+.box div:nth-child( 57 ) {transform: matrix(1, 0, 0, 1, 80 ,5 );}
+.box div:nth-child( 58 ) {transform: matrix(1, 0, 0, 1, 5 ,530 );}
+.box div:nth-child( 59 ) {transform: matrix(1, 0, 0, 1, 5 ,455 );}
+.box div:nth-child( 60 ) {transform: matrix(1, 0, 0, 1, 5 ,380 );}
+.box div:nth-child( 61 ) {transform: matrix(1, 0, 0, 1, 5 ,305 );}
+.box div:nth-child( 62 ) {transform: matrix(1, 0, 0, 1, 5 ,230 );}
+.box div:nth-child( 63 ) {transform: matrix(1, 0, 0, 1, 5 ,155 );}
+.box div:nth-child( 64 ) {transform: matrix(1, 0, 0, 1, 5 ,80 );}
+.box div:nth-child( 65 ) {transform: matrix(1, 0, 0, 1, 5 ,5 );}
