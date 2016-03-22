@@ -1,24 +1,19 @@
+var createDiv = document.createElement('div');
 var cs = [
-    '#000',
+    '#555',
     '#87cefa',
     '#ccc',
-    '#face45'
-]
+    '#fadadd'
+];
 
 function randomize() {
     return Math.floor(Math.random() * (4))
 }
 
-function del() {
-    $('.box div').click(function() {
-        $(this).remove();
-    });
-}
 
 var field = {
     appear: function() {
-        document.querySelectorAll('.box')[0].appendChild(document.createElement('div'));
-        console.log(document.querySelectorAll('.box div'))
+        document.getElementById('myDiv').appendChild(document.createElement('div')).style.backgroundColor = cs[randomize()];
     }
 }
 function run() {
@@ -26,7 +21,7 @@ function run() {
 }
 
 function generator() {
-    for (var i = 0; i < 64; i++) {
+    for (var i = 0; i < 65; i++) {
         field.appear();
     }
 }
